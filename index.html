@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="">
+    <h1 style="text-align: center;">Quiz App</h1>
+    <div id="authSection" style="text-align: center;">
+        <button onclick="showLoginForm()">Login</button>
+        <button onclick="showRegisterForm()">Register</button>
+    </div>
+    <div id="quizSection" style="display: none; text-align: center;">
+
+    <h1 id="timer" style="text-align: center;">2:00</h1>
+    <div id="startBtn" style="text-align: center;"><button onclick="startQuiz()" >Start Quiz</button></div>
+    <div id="hidden" >
+        <div id="questionDiv" style="display: none;">
+            <p id="ques"></p>
+        <input value="1" onclick="clicked()"  class="options" type="radio" name="options" id="option1">
+        <label id="opt1" for="option1" ></label>
+
+        <br><br>
+        <input value="2" onclick="clicked()" class="options" type="radio" name="options" id="option2">
+        <label id="opt2" for="option2" ></label>
+        <br><br>
+        <input value="3" onclick="clicked()" class="options" type="radio" name="options" id="option3">
+        <label id="opt3" for="option3" ></label>
+        <br><br>
+        <!-- <button onclick="lastQuestion()">Back</button> -->
+        <button id="btn" disabled onclick="nextQuestion()">Next</button>
+
+        </div>
+        <!-- <button id="startBtn" style="display: flex; justify-content: center;" onclick="startQuestion()">Start Your Quiz</button> -->
+    </div>
+    </div>
+
+</body>
+<script src="quizapp.js"></script>
+</html>
