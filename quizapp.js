@@ -71,16 +71,8 @@ var questions = [
     },
   ];
   
-  const firebaseConfig = {
-    apiKey: "AIzaSyBQvCrL4U_Di13nJzbjFwrf9CJ1zJoQhIY",
-    authDomain: "todo-app-737f2.firebaseapp.com",
-    databaseURL: "https://todo-app-737f2-default-rtdb.firebaseio.com",
-    projectId: "todo-app-737f2",
-    storageBucket: "todo-app-737f2.firebasestorage.app",
-    messagingSenderId: "322486238181",
-    appId: "1:322486238181:web:3d4946ac4778d78a8dcd0c"
-  };
-  
+//firebase config 
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var auth = firebase.auth();
